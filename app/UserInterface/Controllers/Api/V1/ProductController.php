@@ -3,7 +3,7 @@
 namespace App\UserInterface\Controllers\Api\V1;
 
 use App\Domain\Product\Contracts\ProductServiceContract;
-use App\UserInterface.Controllers\Controller;
+use App\UserInterface\Controllers\Controller;
 use App\UserInterface\Requests\ProductIndexRequest;
 use App\UserInterface\Transformers\ProductResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
