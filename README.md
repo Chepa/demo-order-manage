@@ -50,6 +50,7 @@ docker compose exec app php artisan test
 Либо локально (при установленном PHP и зависимостях):
 
 ```bash
+
 cp .env.example .env
 composer install
 php artisan key:generate

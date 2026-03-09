@@ -234,11 +234,11 @@
                 "operationId": "859629379ffe93860c527d6766ba7648",
                 "parameters": [
                     {
-                        "name": "category",
+                        "name": "category_id",
                         "in": "query",
                         "required": false,
                         "schema": {
-                            "type": "string"
+                            "type": "integer"
                         }
                     },
                     {
