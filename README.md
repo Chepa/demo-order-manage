@@ -14,10 +14,16 @@ docker compose up -d
 
 ### 2. Настроить окружение
 
-Скопировать переменные для Docker и сгенерировать ключ:
+Скопировать переменные для Docker
 
 ```bash
 cp .env.docker.example .env
+```
+
+Установить зависимости и сгенерировать ключ:
+
+```bash
+docker compose exec app composer i
 
 docker compose exec app php artisan key:generate
 ```
@@ -44,8 +50,8 @@ docker compose exec app php artisan test
 Либо локально (при установленном PHP и зависимостях):
 
 ```bash
-composer install
 cp .env.example .env
+composer install
 php artisan key:generate
 php artisan migrate --seed
 php artisan test
