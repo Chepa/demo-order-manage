@@ -63,8 +63,8 @@ class Order extends Model
 
     public const VALID_TRANSITIONS = [
         self::STATUS_NEW => [self::STATUS_CONFIRMED, self::STATUS_CANCELLED],
-        self::STATUS_CONFIRMED => [self::STATUS_PROCESSING, self::STATUS_CANCELLED],
-        self::STATUS_PROCESSING => [self::STATUS_SHIPPED],
+        self::STATUS_CONFIRMED => [self::STATUS_PROCESSING, self::STATUS_COMPLETED, self::STATUS_CANCELLED],
+        self::STATUS_PROCESSING => [self::STATUS_SHIPPED, self::STATUS_COMPLETED, self::STATUS_CANCELLED],
         self::STATUS_SHIPPED => [self::STATUS_COMPLETED],
         self::STATUS_COMPLETED => [],
         self::STATUS_CANCELLED => [],
